@@ -2,10 +2,10 @@
 ##### [nba_api/stats/endpoints/playergamelog.py](https://github.com/swar/nba_api/blob/master/src/nba_api/stats/endpoints/playergamelog.py)
 
 ##### Endpoint URL
->[https://stats.nba.com/stats/playergamelog](https://stats.nba.com/stats/playergamelog)
+>[https://www.nba.com/stats/players/boxscores)
 
 ##### Valid URL
->[https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=&PlayerID=2544&Season=2019-20&SeasonType=Regular+Season](https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=&PlayerID=2544&Season=2019-20&SeasonType=Regular+Season)
+>[https://www.nba.com/stats/players/boxscores?Season=2023-24)
 
 ## Parameters
 | API Parameter Name                                                                                                  | Python Parameter Variable |                                Pattern                                 | Required | Nullable |
@@ -20,7 +20,7 @@
 ## Data Sets
 #### PlayerGameLog `player_game_log`
 ```text
-['SEASON_ID', 'Player_ID', 'Game_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+['SEASON_ID', 'Player_ID', 'Game_ID', 'GAME_DATE', 'MATCHUP', 'W/L', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', '+/-', 'FP']
 ```
 
 
@@ -34,7 +34,7 @@
             "Game_ID",
             "GAME_DATE",
             "MATCHUP",
-            "WL",
+            "W/L",
             "MIN",
             "FGM",
             "FGA",
@@ -54,12 +54,12 @@
             "TOV",
             "PF",
             "PTS",
-            "PLUS_MINUS",
+            "+/-",
             "VIDEO_AVAILABLE"
         ]
     },
     "endpoint": "PlayerGameLog",
-    "last_validated_date": "2020-08-15",
+    "last_validated_date": "2024-02-16",
     "nullable_parameters": [
         "DateFrom",
         "DateTo",
@@ -90,4 +90,4 @@
 }
 ```
 
-Last validated 2020-08-16
+Last validated 2024-02-16
